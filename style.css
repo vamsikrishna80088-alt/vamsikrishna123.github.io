@@ -84,16 +84,16 @@ ul li:hover {
 }
 #cursor-glow {
     position: fixed;
-    width: 60px;
-    height: 60px;
-    background: rgba(0, 255, 255, 0.25);
+    width: 25px;
+    height: 25px;
+    background: #ffcc00;
     border-radius: 50%;
     pointer-events: none;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 40px rgba(0, 255, 255, 0.8),
-                0 0 80px rgba(0, 255, 255, 0.5);
     z-index: 9999;
-    transition: all 0.05s linear;
+
+    box-shadow: 0 0 20px #ffcc00, 0 0 40px orange;
+
+    transition: left 0.15s ease, top 0.15s ease;
 }
 body {
     background: black;
