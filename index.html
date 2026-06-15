@@ -57,14 +57,29 @@
     <footer>
         <p>© 2026 Vamsi Krishna | All Rights Reserved</p>
     </footer>
-<div id="cursor-glow"></div>
+<div id="cursor-bee"></div>
 <script>
-const bee = document.getElementById("cursor-glow");
+const bee = document.getElementById("cursor-bee");
+
+let mouseX = 0, mouseY = 0;
+let beeX = 0, beeY = 0;
 
 document.addEventListener("mousemove", (e) => {
-    bee.style.left = e.clientX + "px";
-    bee.style.top = e.clientY + "px";
+    mouseX = e.clientX;
+    mouseY = e.clientY;
 });
+
+function animate() {
+    beeX += (mouseX - beeX) * 0.12;
+    beeY += (mouseY - beeY) * 0.12;
+
+    bee.style.left = beeX + "px";
+    bee.style.top = beeY + "px";
+
+    requestAnimationFrame(animate);
+}
+
+animate();
 </script>
 
 </body>
