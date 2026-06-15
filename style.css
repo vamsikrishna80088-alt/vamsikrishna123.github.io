@@ -94,3 +94,6 @@ ul li:hover {
                 0 0 60px white;
     z-index: 9999;
 }
+body {
+    background: black;
+}
